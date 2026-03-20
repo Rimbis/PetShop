@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DecoraciónR.css">
+    <title>Registrar cuenta</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <form class="carta">
+        <h2>Registrarse</h2>
+
+        <label>Usuario:</label>
+        <input type="text" name="Nombre" id="Nombre" required>
+
+        <label>Email:</label>
+        <input type="email" name="Email" id="Email" required>
+
+        <label>Contraseña:</label>
+        <input type="password" name="Contraseña" id="Contraseña" required>
+
+        <button type="submit">Guardar cuenta</button>
+
+        <a href="Login.html">Regresar al Login</a>
+
+    </form>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const user = document.getElementById("Nombre").value;
+            const email = document.getElementById("Email").value;
+            const pass = document.getElementById("Contraseña").value;
+
+            //Guardar los datos en local:
+            localStorage.setItem("Usuario", user);
+            localStorage.setItem("Email", email);
+            localStorage.setItem("Contraseña", pass);
+
+            //De vuelta al Login:
+            window.location.href = "Login.html";
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
