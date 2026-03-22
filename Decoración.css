@@ -91,3 +91,89 @@ button:hover {
 input {
     height: 25px;
 }
+
+/*Encabezado decoracion en Index*/
+
+/*Tienda codigo*/
+
+.Encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+
+    /*Posicion*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /*Asegura que quede sobre otro contenido*/
+
+
+    /*cambiar al color que quieran*/
+    background-color: cyan;
+    color: rgb(255, 255, 255);
+}
+
+.Encabezado h1 {
+    color: rgb(2, 51, 49);
+    margin: 2%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.BotonRegreso {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid #093633;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 2%;
+}
+
+.BotonRegreso:hover {
+    background-color: cadetblue;
+}
+
+.padre {
+    display: grid;
+    /*Crea columnas de mínimo 200px, reparte el espacio sobrante*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 90% !important;
+
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    /* Efecto vidrio, se la re rebuscaba y eso que yo no iba a decorar */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.div {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 150px;
+    /*Altura mínima, lol logic*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 247, 255);
+    box-shadow: 0 4px 15px rgba(22, 73, 102, 0.507);
+    transition: all 0.3s ease;
+}
+
+.div:hover {
+    background: white;
+    transform: scale(1.02);
+}
+
+/*Hola, estoy cayendo en la locura, llevo mas de 30 minutos intentando que el header no se coma los contenedores*/
