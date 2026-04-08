@@ -16,7 +16,9 @@
 
 
 
-    <form class="carta">
+
+
+    <form class="carta" action="registro.php" method="POST">
         <h2>Registrarse</h2>
 
         <label>Usuario:</label>
@@ -33,27 +35,6 @@
         <a href="Login.html">Regresar al Login</a>
 
     </form>
-
-    <script>
-        document.querySelector("form").addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const user = document.getElementById("Nombre").value;
-            const email = document.getElementById("Email").value;
-            const pass = document.getElementById("Contraseña").value;
-
-            //Guardar los datos en local:
-            localStorage.setItem("Usuario", user);
-            localStorage.setItem("Email", email);
-            localStorage.setItem("Contraseña", pass);
-
-            //De vuelta al Login:
-            window.location.href = "Login.html";
-
-
-        });
-
-    </script>
 
 </body>
 

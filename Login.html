@@ -22,7 +22,7 @@
     <section class="Conteiner">
 
 
-        <form class="card">
+        <form class="card" action="login.php" method="POST">
             <label>Usuario:</label>
             <input type="text" name="Nombre" id="Nombre" required>
 
@@ -101,31 +101,7 @@
 
 
 
-    <script>
-        document.querySelector("form").addEventListener("submit", (e) => {
-            e.preventDefault();
 
-            //Capturamos lo que escribió el usuario en los inputs
-            const userInput = document.getElementById("Nombre").value;
-            const emailInput = document.getElementById("Email").value;
-            const passInput = document.getElementById("Contraseña").value;
-
-            //Traemos lo que está guardado en el LocalStorage
-            const userSaved = localStorage.getItem("Usuario");
-            const emailSaved = localStorage.getItem("Email");
-            const passSaved = localStorage.getItem("Contraseña"); // Antes decía "Password"
-
-            // Validamos
-            if (userInput === userSaved && emailInput === emailSaved && passInput === passSaved) {
-                // SI TODO ESTÁ BIEN:
-                localStorage.setItem("sesionActiva", "true"); // Marcamos que entró
-                window.location.href = "index.html"; // Asegúrate de que el nombre del archivo coincida (Index vs index)
-            } else {
-                // SI ALGO FALLA:
-                alert("Los datos no coinciden con nuestro registro.");
-            }
-        });
-    </script>
 
 
 </body>
